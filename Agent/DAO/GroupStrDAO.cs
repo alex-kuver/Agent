@@ -8,11 +8,6 @@ namespace Agent.DAO
 {
     public class GroupStrDAO
     {
-      /*  private Entities _entities = new Entities();
-        public IEnumerable<GroupStr> GetAllGroups()
-        {
-            return (from c in _entities.GroupStr
-                    select c);
-        }*/
+
     }
 }

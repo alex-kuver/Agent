@@ -14,33 +14,11 @@ namespace Agent.Controllers
 {
     public class DogovorController : Controller
     {
-        //private static readonly ILog logger = LogManager.GetLogger(typeof(Deadlock));
-        //private static Logger logger = LogManager.GetCurrentClassLogger();
         GroupDogDAO groupDAO = new GroupDogDAO();
         DogovorDAO dogovorDAO = new DogovorDAO();
         TarifDAO tarifDAO = new TarifDAO();
 
-        /*     protected bool ValidateDogovor(Dogovor DogovorToValidate)
-               {
-                   if (DogovorToValidate.IDKl == null)
-                       ModelState.AddModelError("FIO", "Поле 'Фамилия, Имя, Отчество ' обязательно для заполнения.");
-                   if (DogovorToValidate.IDAg == null)
-                       ModelState.AddModelError("Avtor", "Поле 'Автор книги' обязательно для заполнения.");
-                   if (DogovorToValidate.B == null)
-                       ModelState.AddModelError("Book", "Поле 'Название книги' обязательно для заполнения.");
-                   if (DogovorToValidate.Librarian == null)
-                       ModelState.AddModelError("Librarian", "Поле 'Библиотекарь' обязательно для заполнения.");
-                   if (DogovorToValidate.Date == null)
-                       ModelState.AddModelError("Date", "Поле 'Дата' обязательно для заполнения.");
-                   return ModelState.IsValid;
-               }
-              
-
-        public ActionResult Start()
-        {
-            return View("Start");
-        }
- */
+       
         [Authorize]
         public ActionResult Confirm(int id)
         {
