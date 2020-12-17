@@ -35,7 +35,7 @@ namespace Agent.Controllers
             return View();
         }
 
-
+        [Authorize(Roles = "Admin")]
         [HttpPost] // Атрибут, используемый для ограничения метода таким образом, чтобы этот метод обрабатывал только HTTP-запросы Post
         public ActionResult Create([Bind(Exclude = "Id")]Tarif tarif)
         {
@@ -67,7 +67,7 @@ namespace Agent.Controllers
             return View(tarif[trueid]);
         }
 
-
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public ActionResult Edit(Tarif tarif)
         {
